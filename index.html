@@ -3,60 +3,62 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="Ryan 的個人網站。探索資訊安全、網路與程式開發，記錄從好奇到實作的旅程。">
+  <meta name="description" content="Ryan 的個人網站。資安、網路與程式開發專案。">
   <meta name="theme-color" content="#101310">
-  <title>Ryan — Stay curious. Build securely.</title>
+  <title>Ryan | 資安・網路・開發</title>
   <link rel="icon" href="./favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./style.css?v=20261111">
-  <script src="./script.js" defer></script>
+  <link rel="stylesheet" href="./style.css?v=3">
+  <link rel="stylesheet" href="./effects.css?v=3">
+  <script src="./script.js?v=3" defer></script>
 </head>
 <body>
+  <canvas id="network-bg" aria-hidden="true"></canvas><div class="pointer-glow" aria-hidden="true"></div><div class="scroll-progress" aria-hidden="true"></div>
   <a class="skip" href="#main">跳至主要內容</a>
   <header class="header wrap">
     <a class="wordmark" href="#" aria-label="Ryan 首頁">ryan<span>_</span></a>
-    <nav aria-label="主要導覽"><a href="#about">關於我</a><a href="#work">探索與實作</a><a href="#contact" class="nav-contact">Let's talk <span aria-hidden="true">↗</span></a></nav>
+    <nav aria-label="主要導覽"><a href="#about">關於</a><a href="#work">專案</a><a href="#contact" class="nav-contact">GitHub <span aria-hidden="true">↗</span></a></nav>
   </header>
   <main id="main">
     <section class="hero wrap" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="eyebrow"><span class="status-dot"></span> A CURIOUS MIND IN CYBERSECURITY</p>
-        <h1 id="hero-title">Stay curious.<br>Build <em>securely.</em></h1>
-        <p class="intro">嗨，我是 Ryan <span class="wave">↗</span><br>從一個「為什麼」開始，探索資訊安全的每個可能。</p>
-        <p class="hero-detail">資訊管理學生 / 資安探索者 / 持續學習中</p>
-        <a class="button" href="#work">看看我的探索 <span aria-hidden="true">↓</span></a>
+        <p class="eyebrow"><span class="status-dot"></span> CYBERSECURITY / NETWORKS / DEVELOPMENT</p>
+        <h1 id="hero-title">Ryan<br><em>Chen.</em></h1>
+        <p class="intro">資安 / 網路 / 程式開發<br>公開專案與技術筆記。</p>
+        <p class="hero-detail">滲透測試 / Active Directory / 網路安全</p>
+        <a class="button" href="#work">查看專案 <span aria-hidden="true">↓</span></a>
       </div>
       <div class="visual" aria-label="代表網路探索的互動終端機">
         <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <span class="orbit-label label-top">EXPLORE → UNDERSTAND → BUILD</span>
+        <span class="orbit-label label-top">WORKSPACE / 01</span>
         <div class="cross cross-a">+</div><div class="cross cross-b">+</div>
         <div class="terminal">
           <div class="terminal-bar"><span class="terminal-dots">● ● ●</span><span>ryan@workspace: ~</span><span>⌘</span></div>
           <div class="terminal-body">
             <p><span class="prompt">❯</span> whoami</p>
-            <p class="terminal-answer">Ryan. A student who asks why.</p>
+            <p class="terminal-answer">ryan / personal workspace</p>
             <div class="ascii-mark" aria-hidden="true"><svg viewBox="0 0 200 140"><path d="M100 10 167 47v48l-67 38-67-38V47Z M100 10v48l67 37 M33 95l67-37 M100 58v75 M33 47l67 38 67-38"/><circle cx="100" cy="58" r="7"/></svg></div>
             <p><span class="prompt">❯</span> cat interests.txt</p>
             <p class="terminal-answer">security · networks · code</p>
-            <p class="terminal-input"><span class="prompt">❯</span> <span id="terminal-text">Always learning.</span><span class="cursor">▋</span></p>
+            <p class="terminal-input"><span class="prompt">❯</span> <span id="terminal-text">ls ./projects</span><span class="cursor">▋</span></p>
           </div>
         </div>
-        <button class="visual-chip" id="terminal-button" type="button" aria-label="切換終端機訊息"><span class="status-dot"></span> curiosity.exe is running <span>↻</span></button>
-        <span class="visual-coordinate">25° N / TAIWAN</span>
+        <button class="visual-chip" id="terminal-button" type="button" aria-label="切換終端機指令"><span class="status-dot"></span> session: active <span>↻</span></button>
+        <span class="visual-coordinate">TAIWAN / LOCAL SESSION</span>
       </div>
-      <div class="hero-bottom"><span>BASED IN TAIWAN</span><span>SCROLL TO EXPLORE <span aria-hidden="true">↓</span></span><span>PERSONAL SPACE / 2026</span></div>
+      <div class="hero-bottom"><span>TAIWAN</span><span>SCROLL <span aria-hidden="true">↓</span></span><button id="motion-toggle" type="button" aria-pressed="true">動態效果：開</button></div>
     </section>
     <section class="about section wrap" id="about" aria-labelledby="about-title">
-      <div class="section-label"><span>01 / ABOUT</span><span>保持好奇，持續前進。</span></div>
-      <div class="about-layout"><h2 id="about-title">不只想知道答案。<br><span>更想弄懂原理。</span></h2><div class="about-copy"><p>我是 Ryan，目前就讀資訊管理系。大一的一門資安課，讓我開始好奇：系統是怎麼運作的？又為什麼會出現漏洞？</p><p>現在，我把這份好奇帶進資訊安全、網路與程式開發。透過研究、實驗與反覆練習，一步一步把抽象的概念變成看得懂的實作。</p><div class="about-note"><span>MY APPROACH</span>理解原理 → 動手驗證 → 整理分享</div></div></div>
+      <div class="section-label"><span>01 / ABOUT</span><span>關於我</span></div>
+      <div class="about-layout"><h2 id="about-title">目前在做什麼<span class="accent">.</span><br><span>資安、網路、程式。</span></h2><div class="about-copy"><p>這裡整理我的公開專案與技術筆記，主題以資訊安全、企業網路和程式開發為主。</p><p>專案原始碼放在 GitHub。你可以從下面的網路模擬專案開始看，或直接到 GitHub 查看其他內容。</p><div class="about-note"><span>CURRENT FOCUS</span>Web 安全 / 身分驗證 / 企業網路</div></div></div>
     </section>
     <section class="work section wrap" id="work" aria-labelledby="work-title">
-      <div class="section-label"><span>02 / EXPLORATIONS</span><span>LEARN BY DOING</span></div>
-      <div class="section-heading"><h2 id="work-title">把好奇，變成實作<span class="accent">.</span></h2><p>一些正在探索的方向，以及動手做的痕跡。</p></div>
-      <a class="project featured" href="https://github.com/ryanuwu1020/Enterprise-Network-Simulation" target="_blank" rel="noopener noreferrer"><div class="project-art" aria-hidden="true"><div class="network-line horizontal"></div><div class="network-line vertical"></div><div class="network-node node-one">WAN</div><div class="network-node node-two">CORE</div><div class="network-node node-three">LAN 01</div><div class="network-node node-four">LAN 02</div><span class="art-caption">CONNECTED BY DESIGN.</span></div><div class="project-content"><div class="project-meta"><span>01 — PUBLIC REPOSITORY</span><span class="arrow">↗</span></div><h3>Enterprise Network<br>Simulation</h3><p>從網路拓樸出發，探索企業網路的組成。公開的網路模擬專案，是把概念帶進實作的起點。</p><div class="tags"><span>NETWORKING</span><span>SIMULATION</span></div><span class="text-link">在 GitHub 查看專案 <span>↗</span></span></div></a>
-      <div class="research-grid"><article class="research"><div class="project-meta"><span>02 — LEARNING FOCUS</span><span class="mini-icon">⌁</span></div><h3>Security, from the inside.</h3><p>研究身分驗證、Active Directory 與 Kerberos，從協定流程理解系統安全。</p><div class="tags"><span>IDENTITY</span><span>KERBEROS</span></div></article><article class="research"><div class="project-meta"><span>03 — LEARNING FOCUS</span><span class="mini-icon">&lt;/&gt;</span></div><h3>Think. Code. Repeat.</h3><p>用程式把想法做出來。在開發與資安練習之間，累積解決問題的能力。</p><div class="tags"><span>PROGRAMMING</span><span>SECURITY LABS</span></div></article></div>
+      <div class="section-label"><span>02 / PROJECTS & STUDY</span><span>專案與學習</span></div>
+      <div class="section-heading"><h2 id="work-title">專案與研究方向<span class="accent">.</span></h2><p>公開專案放在 GitHub，其他是目前的學習主題。</p></div>
+      <a class="project featured" href="https://github.com/ryanuwu1020/Enterprise-Network-Simulation" target="_blank" rel="noopener noreferrer"><div class="project-art" aria-hidden="true"><div class="network-line horizontal"></div><div class="network-line vertical"></div><span class="packet packet-one"></span><span class="packet packet-two"></span><div class="network-node node-one">WAN</div><div class="network-node node-two">CORE</div><div class="network-node node-three">LAN 01</div><div class="network-node node-four">LAN 02</div><span class="art-caption">ENTERPRISE NETWORK / TOPOLOGY</span></div><div class="project-content"><div class="project-meta"><span>01 — PUBLIC REPOSITORY</span><span class="arrow">↗</span></div><h3>Enterprise Network<br>Simulation</h3><p>企業網路模擬專案。透過網路拓樸與模擬環境，練習企業網路的規劃與設定。</p><div class="tags"><span>NETWORKING</span><span>SIMULATION</span></div><span class="text-link">查看原始碼 <span>↗</span></span></div></a>
+      <div class="research-grid"><article class="research"><div class="project-meta"><span>02 — STUDY</span><span class="mini-icon">⌁</span></div><h3>Active Directory / Kerberos</h3><p>研究 AD 環境中的身分驗證、票證流程，以及相關攻擊方式與防禦。</p><div class="tags"><span>IDENTITY</span><span>KERBEROS</span></div></article><article class="research"><div class="project-meta"><span>03 — PRACTICE</span><span class="mini-icon">&lt;/&gt;</span></div><h3>程式開發 / CTF</h3><p>資料結構、程式練習與 Web 安全題目。目前以練習和實驗為主。</p><div class="tags"><span>PROGRAMMING</span><span>SECURITY LABS</span></div></article></div>
     </section>
-    <section class="contact wrap" id="contact" aria-labelledby="contact-title"><p class="eyebrow">03 / WHAT'S NEXT?</p><div class="contact-row"><h2 id="contact-title">下一個想法，<br>一起聊聊<span>↗</span></h2><div><p>交流資安、分享專案，<br>或只是打聲招呼。</p><a class="button" href="https://github.com/ryanuwu1020" target="_blank" rel="noopener noreferrer">Find me on GitHub <span>↗</span></a></div></div></section>
+    <section class="contact wrap" id="contact" aria-labelledby="contact-title"><p class="eyebrow">03 / GITHUB</p><div class="contact-row"><h2 id="contact-title">其他專案<span>↗</span></h2><div><p>原始碼和後續更新都在 GitHub。</p><a class="button" href="https://github.com/ryanuwu1020" target="_blank" rel="noopener noreferrer">@ryanuwu1020 <span>↗</span></a></div></div></section>
   </main>
-  <footer class="footer wrap"><a class="wordmark" href="#" aria-label="回到首頁">ryan<span>_</span></a><p>© <span id="year">2026</span> Ryan. Built with curiosity.</p><a href="#main">回到頂端 ↑</a></footer>
+  <footer class="footer wrap"><a class="wordmark" href="#" aria-label="回到首頁">ryan<span>_</span></a><p>© <span id="year">2026</span> Ryan Chen.</p><a href="#main">回到頂端 ↑</a></footer>
 </body>
 </html>
