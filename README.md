@@ -1,4 +1,4 @@
-# Ryan �X Personal Website
+# Ryan — Personal Website
 
 A responsive, static portfolio built with HTML, CSS and JavaScript.
 
@@ -10,7 +10,7 @@ Run `python -m http.server 8080` in this folder, then visit http://localhost:808
 
 ## Deployment
 
-In GitHub, open **Settings �� Pages**. Select **Deploy from a branch**, choose **main** and **/ (root)**, then Save. GitHub Pages publishes the site automatically after changes to main.
+In GitHub, open **Settings → Pages**. Select **Deploy from a branch**, choose **main** and **/ (root)**, then Save. GitHub Pages publishes the site automatically after changes to main.
 
 ## Editing
 
